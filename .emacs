@@ -53,6 +53,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/modules/auto-complete-clang")
 (require 'auto-complete-clang)
+(define-key c++-mode-map (kbd "C-S-<return>") 'ac-complete-clang)
 
 (setq ac-auto-start nil)
 (setq ac-quick-help-delay 0.5)
