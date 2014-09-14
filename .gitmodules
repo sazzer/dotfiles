@@ -4,3 +4,6 @@
 [submodule "modules/auto-complete-clang"]
 	path = modules/auto-complete-clang
 	url = https://github.com/brianjcj/auto-complete-clang.git
+[submodule "modules/ecb"]
+	path = modules/ecb
+	url = https://github.com/alexott/ecb
