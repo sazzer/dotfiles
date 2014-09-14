@@ -17,7 +17,7 @@
 
 ; ECB
 (add-to-list 'load-path "~/.emacs.d/modules/ecb")
-;(require 'ecb)
+(require 'ecb)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -28,7 +28,7 @@
  '(ecb-compile-window-height 6)
  '(ecb-layout-name "left15")
  '(ecb-options-version "2.40")
- '(ecb-source-path (quote ("~/source/cpp-openrl")))
+ '(ecb-source-path (quote (".")))
  '(ecb-tree-buffer-style (quote ascii-guides))
  '(inhibit-startup-screen t)
  '(load-home-init-file t t))
