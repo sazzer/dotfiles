@@ -7,3 +7,6 @@
 [submodule "modules/ecb"]
 	path = modules/ecb
 	url = https://github.com/alexott/ecb
+[submodule "modules/auto-complete"]
+	path = modules/auto-complete
+	url = https://github.com/auto-complete/auto-complete
