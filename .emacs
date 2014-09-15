@@ -50,6 +50,9 @@
 (custom-set-variables
  '(ecb-options-version "2.40"))
 (setq ecb-source-path (quote (".")))
+(setq ecb-layout-name "left15")
+(setq show-sources-in-directories-buffer t)
+
                                         ; Autopair
 (require 'autopair)
 (autopair-global-mode)
