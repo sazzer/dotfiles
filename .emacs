@@ -10,6 +10,10 @@
       mac-command-modifier 'meta
       mac-option-modifier 'none)
 
+; Org-Mode
+(add-to-list 'load-path "~/.emacs.d/modules/org-mode/lisp")
+(require 'org)
+
 ; Multi Scratch
 (require 'multi-scratch)
 

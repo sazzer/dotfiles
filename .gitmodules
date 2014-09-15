@@ -10,3 +10,6 @@
 [submodule "modules/auto-complete"]
 	path = modules/auto-complete
 	url = https://github.com/auto-complete/auto-complete
+[submodule "modules/org-mode"]
+	path = modules/org-mode
+	url = git://orgmode.org/org-mode.git
