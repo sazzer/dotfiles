@@ -13,3 +13,6 @@
 [submodule "modules/org-mode"]
 	path = modules/org-mode
 	url = git://orgmode.org/org-mode.git
+[submodule "modules/twittering-mode"]
+	path = modules/twittering-mode
+	url = git://github.com/hayamiz/twittering-mode.git

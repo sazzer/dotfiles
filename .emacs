@@ -110,3 +110,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+                                        ; GPG
+(mc-setversion "gpg")
+
+(require 'epa-file)
+(epa-file-enable)
+                                        ; Twittering Mode
+(add-to-list 'load-path "~/.emacs.d/modules/twittering-mode")
+(require 'twittering-mode)
+(setq twittering-use-master-password t)
