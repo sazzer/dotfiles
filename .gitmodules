@@ -16,3 +16,9 @@
 [submodule "modules/twittering-mode"]
 	path = modules/twittering-mode
 	url = git://github.com/hayamiz/twittering-mode.git
+[submodule "modules/magit"]
+	path = modules/magit
+	url = git://github.com/magit/magit.git
+[submodule "modules/git-modes"]
+	path = modules/git-modes
+	url = git://github.com/magit/git-modes.git

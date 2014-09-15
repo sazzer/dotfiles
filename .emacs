@@ -119,3 +119,8 @@
 (add-to-list 'load-path "~/.emacs.d/modules/twittering-mode")
 (require 'twittering-mode)
 (setq twittering-use-master-password t)
+
+                                        ; Magit
+(add-to-list 'load-path "~/.emacs.d/modules/magit")
+(add-to-list 'load-path "~/.emacs.d/modules/git-modes")
+(require 'magit)
