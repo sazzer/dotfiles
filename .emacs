@@ -5,6 +5,7 @@
 (xterm-mouse-mode)
 (define-prefix-command 'mode-specific-map)
 (global-set-key (kbd "C-c") 'mode-specific-map)
+(setq inhibit-startup-screen t)
 
                                         ; OS X support
 (setq mac-option-key-is-meta nil
@@ -19,16 +20,15 @@
 (define-key mode-specific-map [?a] 'org-agenda)
 (define-key mode-specific-map [?c] 'org-capture)
 (custom-set-variables
- '(org-default-notes-file (concat org-directory "/notes.org"))
  '(org-agenda-files (concat org-directory "/todo.org"))
  '(org-agenda-ndays 7)
- '(org-deadline-warning-days 14)
  '(org-agenda-show-all-dates t)
  '(org-agenda-skip-deadline-if-done t)
  '(org-agenda-skip-scheduled-if-done t)
  '(org-agenda-start-on-weekday t)
- '(org-reverse-note-order t)
-)
+ '(org-deadline-warning-days 14)
+ '(org-default-notes-file (concat org-directory "/notes.org"))
+ '(org-reverse-note-order t))
 
                                         ; Multi Scratch
 (require 'multi-scratch)
@@ -47,21 +47,9 @@
                                         ; ECB
 (add-to-list 'load-path "~/.emacs.d/modules/ecb")
 (require 'ecb)
-
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ecb-auto-activate f)
- '(ecb-compile-window-height 6)
- '(ecb-layout-name "left15")
- '(ecb-options-version "2.40")
- '(ecb-source-path (quote (".")))
- '(ecb-tree-buffer-style (quote ascii-guides))
- '(inhibit-startup-screen t)
- '(load-home-init-file t t))
-
+ '(ecb-options-version "2.40"))
+(setq ecb-source-path (quote (".")))
                                         ; Autopair
 (require 'autopair)
 (autopair-global-mode)
@@ -111,8 +99,6 @@
  ;; If there is more than one, they won't work right.
  )
                                         ; GPG
-(mc-setversion "gpg")
-
 (require 'epa-file)
 (epa-file-enable)
                                         ; Twittering Mode
@@ -127,3 +113,4 @@
 
                                         ; Jira
 (require 'jira)
+(setq jira-url "https://jira.oclc.org")
