@@ -117,3 +117,11 @@
                                         ; Jira
 (require 'jira)
 (setq jira-url "https://jira.oclc.org")
+
+										; Markdown Mode
+(add-to-list 'load-path "~/.emacs.d/modules/markdown-mode")
+(autoload 'markdown-mode "markdown-mode"
+   "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
