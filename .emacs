@@ -4,6 +4,12 @@
 (setq stack-trace-on-error t)
 (xterm-mouse-mode)
 
+; OS X support
+(setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none)
+
 ; Multi Scratch
 (require 'multi-scratch)
 
