@@ -1,34 +1,50 @@
-; General Settings
+                                        ; General Settings
 (add-to-list 'load-path "~/.emacs.d/modules")
 (setq compilation-scroll-output 1)
 (setq stack-trace-on-error t)
 (xterm-mouse-mode)
+(define-prefix-command 'mode-specific-map)
+(global-set-key (kbd "C-c") 'mode-specific-map)
 
-; OS X support
+                                        ; OS X support
 (setq mac-option-key-is-meta nil
       mac-command-key-is-meta t
       mac-command-modifier 'meta
       mac-option-modifier 'none)
 
-; Org-Mode
+                                        ; Org-Mode
 (add-to-list 'load-path "~/.emacs.d/modules/org-mode/lisp")
-(require 'org)
+(require 'org-install)
+(add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
+(define-key mode-specific-map [?a] 'org-agenda)
+(define-key mode-specific-map [?c] 'org-capture)
+(custom-set-variables
+ '(org-default-notes-file (concat org-directory "/notes.org"))
+ '(org-agenda-files (concat org-directory "/todo.org"))
+ '(org-agenda-ndays 7)
+ '(org-deadline-warning-days 14)
+ '(org-agenda-show-all-dates t)
+ '(org-agenda-skip-deadline-if-done t)
+ '(org-agenda-skip-scheduled-if-done t)
+ '(org-agenda-start-on-weekday t)
+ '(org-reverse-note-order t)
+)
 
-; Multi Scratch
+                                        ; Multi Scratch
 (require 'multi-scratch)
 
-; Indentation
+                                        ; Indentation
 (setq-default c-basic-offset 4 c-default-style "linux")
 (setq-default tab-width 4 indent-tabs-mode t)
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
-; CC-Mode
+                                        ; CC-Mode
 (require 'cc-mode)
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
-; ECB
+                                        ; ECB
 (add-to-list 'load-path "~/.emacs.d/modules/ecb")
 (require 'ecb)
 
@@ -46,17 +62,17 @@
  '(inhibit-startup-screen t)
  '(load-home-init-file t t))
 
-; Autopair
+                                        ; Autopair
 (require 'autopair)
 (autopair-global-mode)
 (setq autopair-autowrap t)
 
-; Yasnippit
+                                        ; Yasnippit
 (add-to-list 'load-path "~/.emacs.d/modules/yasnippet")
 (require 'yasnippet)
 (yas-global-mode 1)
 
-; Auto Complete
+                                        ; Auto Complete
 (add-to-list 'load-path "~/.emacs.d/modules/auto-complete")
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
