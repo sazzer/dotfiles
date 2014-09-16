@@ -1,0 +1,16 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: Bandit Test
+# key: bandit
+# binding: direct-keybinding
+# --
+#include <bandit/bandit.h>
+
+using namespace bandit;
+
+go_bandit([](){
+    describe("${1:Test}", [&](){
+        it("${2:Condition}", [&](){
+            $0
+        });
+    });
+});
